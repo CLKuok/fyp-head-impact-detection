@@ -106,6 +106,10 @@ The project is divided into three key stages:
 
 ---
 
-## ✨ Acknowledgements
+## 🔗 References & Acknowledgements
 
 This work is conducted as part of the Monash University Mechatronics & Robotics Engineering FYP, with industry collaboration from HITIQ.
+
+- [Darkmyter/Football-Players-Tracking](https://github.com/Darkmyter/Football-Players-Tracking):  
+  Provided the original training code and pretrained YOLOv5/YOLOv8 weights for football player detection.  
+  In this project, we reused those pretrained weights but tested them on our own AFL dataset for evaluation.
