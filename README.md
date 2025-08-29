@@ -28,7 +28,9 @@ fyp-head-impact-detection/
 ├── requirements.txt     # Python dependencies
 └── README.md            # This file
 
+---
 ## ⚙️ Getting Started
+
 
 ### 1. Clone the Repository
 ```bash
