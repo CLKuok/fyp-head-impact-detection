@@ -1,6 +1,6 @@
 # FYP: Head Impact Detection
 
-This repository explores **AI-based methods for detecting player collisions and head impacts in AFL match footage**, developed in collaboration with **HITIQ** as part of a Monash University Final Year Project (FYP).  
+This repository explores **AI-based methods for detecting player collisions and head impacts in AFL match footage**, developed in collaboration with **HITIQ** as part of a Monash University Final Year Project.  
 The project investigates player detection, tracking, and impact classification using deep learning models, with the eventual goal of integrating video-based analysis with HITIQ’s smart mouthguard system.
 
 ---
@@ -27,77 +27,85 @@ fyp-head-impact-detection/
 ├── reports/             # Project findings, diagrams
 ├── requirements.txt     # Python dependencies
 └── README.md            # This file
+```
 
-⚙️ Getting Started
-1. Clone the Repository
+---
+
+## ⚙️ Getting Started
+
+**1. Clone the Repository**
+```bash
 git clone https://github.com/CLKuok/fyp-head-impact-detection.git
 cd fyp-head-impact-detection
+```
 
-2. Install Dependencies
+**2. Install Dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-3. Dataset Preparation
+**3. Dataset Preparation**
 
-Due to privacy, raw AFL/HITIQ footage is not included.
-Follow data/README.md for instructions on:
+Due to privacy, raw AFL/HITIQ footage is not included.  
+Follow `data/README.md` for instructions on:
 
-Extracting frames from videos
+- Extracting frames from videos
+- Organising YOLO-format datasets
+- Preparing impact/non-impact clips for MMAction2
 
-Organising YOLO-format datasets
+---
 
-Preparing impact/non-impact clips for MMAction2
-
-🧠 Methodology
+## 🧠 Methodology
 
 The project is divided into three key stages:
 
-Player Detection & Tracking
+1. **Player Detection & Tracking**
+   - YOLOv5/YOLOv8 for detecting players in AFL footage
+   - Tracking algorithms (DeepSORT, ByteTrack) for consistent IDs
 
-YOLOv5/YOLOv8 for detecting players in AFL footage
+2. **Impact Motion Classification**
+   - Human Action Recognition models (TSN, SlowFast, etc.)
+   - Trained on clips labelled as impact or non-impact (from XML annotations & HITIQ data)
 
-Tracking algorithms (DeepSORT, ByteTrack) for consistent IDs
+3. **Integration & Evaluation**
+   - Match detected events with HITIQ’s smart mouthguard data
+   - Evaluate performance using metrics (mAP@0.5, Precision, Recall, F1)
 
-Impact Motion Classification
+---
 
-Human Action Recognition models (TSN, SlowFast, etc.)
+## 📊 Results & Findings (Work in Progress)
 
-Trained on clips labelled as impact or non-impact (from XML annotations & HITIQ data)
+| Model         | mAP@0.5 | Precision | Recall | Notes                 |
+|---------------|---------|----------|--------|-----------------------|
+| YOLOv5x       | TBD     | TBD      | TBD    | AFL player detection  |
+| TSN (MMAction)| TBD     | TBD      | TBD    | Impact classification |
 
-Integration & Evaluation
+---
 
-Match detected events with HITIQ’s smart mouthguard data
+## 🛠 Tools & Frameworks
 
-Evaluate performance using metrics (mAP@0.5, Precision, Recall, F1)
+- PyTorch
+- YOLOv5 / YOLOv8
+- MMAction2
+- CVAT (for data annotation)
 
-📊 Results & Findings (Work in Progress)
-Model	mAP@0.5	Precision	Recall	Notes
-YOLOv5x	TBD	TBD	TBD	AFL player detection
-TSN (MMAction)	TBD	TBD	TBD	Impact classification
-🛠 Tools & Frameworks
+---
 
-PyTorch
+## 📅 Next Steps
 
-YOLOv5 / YOLOv8
+- Prepare and label AFL player detection dataset (YOLO format)
+- Extract impact/non-impact clips from annotated XML + videos
+- Train and benchmark TSN/SlowFast models on action recognition
+- Integrate detection + HAR for full pipeline evaluation
 
-MMAction2
+---
 
-CVAT
- for data annotation
-
-📅 Next Steps
-
- Prepare and label AFL player detection dataset (YOLO format)
-
- Extract impact/non-impact clips from annotated XML + videos
-
- Train and benchmark TSN/SlowFast models on action recognition
-
- Integrate detection + HAR for full pipeline evaluation
-
-📜 License
+## 📜 License
 
 ⚠️ To be decided (MIT, Apache 2.0, or private depending on HITIQ requirements).
 
-✨ Acknowledgements
+---
+
+## ✨ Acknowledgements
 
 This work is conducted as part of the Monash University Mechatronics & Robotics Engineering FYP, with industry collaboration from HITIQ.
