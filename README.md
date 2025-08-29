@@ -132,17 +132,6 @@ Pretrained weights for these models were sourced from the [Football-Players-Trac
 
 ---
 
-## 📅 Next Steps
-
-- **Fine-tune Player Detection**  
-  Adapt and fine-tune the football-trained YOLO models on AFL-specific annotated frames to improve detection precision and robustness under occlusion and dense player distributions.
-
-- **Prototype Intuitive Impact Detection**  
-  Explore heuristic methods for identifying potential head impacts, such as detecting sudden changes in player bounding box position or velocity. This will serve as an initial baseline until clipped impact datasets are fully available.
-
-- **Head Detection and Localisation**  
-  Investigate the feasibility of detecting and tracking heads (or upper body regions) directly, as a precursor to linking visible impact events with sensor-based mouthguard data.
-
 ## ⚠️ Limitations and Challenges
 
 Several challenges were encountered during the early stages of this project, primarily related to data preparation and domain-specific complexity:
