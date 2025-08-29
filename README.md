@@ -121,6 +121,7 @@ Pretrained weights for these models were sourced from the [Football-Players-Trac
 - Evaluation time and inference speed were comparable across models, with larger architectures (YOLOv5x/YOLOv8l) offering marginal improvements in F1 but not in precision.
 
 **More to come...**
+
 ---
 
 ## 🛠 Tools & Frameworks
