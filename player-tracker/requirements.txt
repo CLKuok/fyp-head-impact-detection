@@ -1,0 +1,19 @@
+# Impact Detection and Player Tracking
+
+This repository contains a Jupyter notebook for detecting impacts and tracking players in football videos using YOLOv5 and ByteTrack.
+
+## Prerequisites
+
+- Python 3.x
+- Required libraries:
+  - OpenCV
+  - PyTorch
+  - YOLOv5
+  - ByteTrack
+  - Matplotlib
+  - tqdm
+  - NumPy
+
+## Setup Instructions
+
+1. Clone the repository:
