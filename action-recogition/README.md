@@ -22,6 +22,12 @@ git clone https://github.com/open-mmlab/mmaction2.git
 cd mmaction2
 pip install -v -e .
 ```
+By default, `git clone` creates a nested `mmaction2` folder. For a flat layout (Evaluation.ipynb beside MMAction2 files), manually move the contents up:
+
+- Desired structure:
+  - action-recogition/
+    - Evaluation.ipynb
+    - [MMAction2 files and folders here — no nested mmaction2/]
 
 ## 4) Model configs, checkpoints, labels
 Place or link your configs, checkpoints, and label map as referenced in the notebook:
